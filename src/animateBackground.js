@@ -1,8 +1,6 @@
-import { loadAssets } from "./loadAssets";
 import { scaleToWindow } from "./utils/scaleToWindow";
 
-export async function animateBackground(app) {
-    const { bg1, bg2, bg3 } = await loadAssets();
+export async function animateBackground(app, bg1, bg2, bg3) {
 
     scaleToWindow(app, bg1, bg2, bg3);
     bg2.x = app.screen.width;
