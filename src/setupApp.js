@@ -1,7 +1,7 @@
-import * as PIXI from "pixi.js";
+import { Application } from "pixi.js";
 
 export async function setupApp() {
-    const app = new PIXI.Application();
+    const app = new Application();
     await app.init({
         resizeTo: window,
         backgroundColor: "#000",
