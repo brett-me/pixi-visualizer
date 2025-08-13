@@ -9,7 +9,7 @@ export async function animateBackground(app, bg1, bg2, bg3) {
     app.stage.addChild(bg1, bg2, bg3);
 
     app.ticker.add((time) => {
-        const dx = time.deltaMS * 0.1;
+        const dx = time.deltaMS * 0.05;
 
         bg1.x -= dx;
         bg2.x -= dx;
@@ -25,4 +25,5 @@ export async function animateBackground(app, bg1, bg2, bg3) {
             bg3.x += app.screen.width * 3;
         }
     });
+
 }

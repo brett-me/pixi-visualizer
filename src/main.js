@@ -2,6 +2,7 @@ import { setupApp } from "./setupApp";
 import { loadAssets } from "./loadAssets";
 import { animateBackground } from "./animateBackground";
 import { overlay } from "./overlay";
+import { apertureManager } from "./apertureManager";
 
 
 (async () => {
@@ -9,6 +10,10 @@ import { overlay } from "./overlay";
     const { bg1, bg2, bg3 } = await loadAssets();
 
     animateBackground(app, bg1, bg2, bg3);
-    overlay(app);
+    
+    const veil = overlay(app);
+
+    apertureManager(app, veil);
+
 
 })();
