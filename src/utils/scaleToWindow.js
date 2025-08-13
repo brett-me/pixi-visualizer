@@ -12,12 +12,7 @@ export function scaleToWindow(app, ...objs) {
 
     resize();
 
-    // let resizeTimeout;
     window.addEventListener("resize", () => {
-        // clearTimeout(resizeTimeout);
-        // resizeTimeout = setTimeout(() => {
-            app.renderer.resize(window.innerWidth, window.innerHeight);
-            // resize();
-        // }, 100);
+        app.renderer.resize(window.innerWidth, window.innerHeight);
     });
 }
