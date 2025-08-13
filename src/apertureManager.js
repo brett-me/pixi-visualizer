@@ -1,8 +1,8 @@
 import { Graphics } from "pixi.js"; 
 
 export function apertureManager(app, veil) {
-    const width = Math.max(75, Math.random() * 300);
-    const height = Math.max(75, Math.random() * 300);
+    const width = (app.screen.width * 0.05) + (Math.random() * app.screen.width * 0.15);
+    const height = (app.screen.height * 0.05) + (Math.random() * app.screen.height * 0.15);
 
     const frame = new Graphics()
         .rect(0, 0, width, height)
@@ -18,4 +18,5 @@ export function apertureManager(app, veil) {
     });
 
     app.stage.addChild(frame);
+
 }
