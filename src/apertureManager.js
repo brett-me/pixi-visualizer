@@ -19,4 +19,6 @@ export function apertureManager(app, veil) {
 
     app.stage.addChild(frame);
 
+    return frame;
+
 }

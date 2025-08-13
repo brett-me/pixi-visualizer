@@ -11,6 +11,6 @@ import { stageBackground } from "./stageBackground";
     const { bg1, bg2, bg3 } = await loadAssets();
     stageBackground(app, bg1, bg2, bg3);
     const veil = overlay(app);
-    apertureManager(app, veil);
-    startAnimation(app, bg1, bg2, bg3);
+    const frame = apertureManager(app, veil);
+    startAnimation(app, bg1, bg2, bg3, veil, frame);
 })();
